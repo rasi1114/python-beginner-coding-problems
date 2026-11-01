@@ -1,0 +1,19 @@
+arriveAlice = input("Alice arrival date (MM-DD): ")
+leaveAlice = input("Alice leaving date (MM-DD): ")
+
+arriveBob = input("Bob arrival date (MM-DD): ")
+leaveBob = input("Bob leaving date (MM-DD): ")
+
+alice_start = int(arriveAlice[:2]) * 100 + int(arriveAlice[3:])
+alice_end = int(leaveAlice[:2]) * 100 + int(leaveAlice[3:])
+
+bob_start = int(arriveBob[:2]) * 100 + int(arriveBob[3:])
+bob_end = int(leaveBob[:2]) * 100 + int(leaveBob[3:])
+
+start = max(alice_start, bob_start)
+end = min(alice_end, bob_end)
+
+if start <= end:
+    print(end - start + 1)
+else:
+    print(0)
