@@ -1,18 +1,13 @@
 # python-beginner-coding-problems
-x = int(input("Enter a number: "))
+n = int(input("Enter a number: "))
 
-if x < 0:
+if n < 1:
     print(False)
 else:
-    original = x
-    reverse = 0
+    while n % 2 == 0:
+        n = n // 2
 
-    while x > 0:
-        digit = x % 10
-        reverse = reverse * 10 + digit
-        x = x // 10
-
-    if original == reverse:
+    if n == 1:
         print(True)
     else:
         print(False)
