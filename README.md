@@ -1,2 +1,18 @@
 # python-beginner-coding-problems
-Beginner-friendly Python coding problems with simple solutions and examples. This repository includes palindrome number, power of two, number of steps to reduce a number to zero, and other basic programming problems.
+x = int(input("Enter a number: "))
+
+if x < 0:
+    print(False)
+else:
+    original = x
+    reverse = 0
+
+    while x > 0:
+        digit = x % 10
+        reverse = reverse * 10 + digit
+        x = x // 10
+
+    if original == reverse:
+        print(True)
+    else:
+        print(False)
